@@ -1,0 +1,14 @@
+<h1><%=@word.name%></h1>
+
+<%@word.defs.each() do |definition|%>
+<li><%=definition.content()%> <strong>by <%=definition.by()%></strong></li>
+<%end%>
+
+<form action="/add_def">
+<label for="definition">Add definition</label>
+<input type="text" name="definition" id="definition" value="">
+<label for="by">By</label>
+<input type="text" name="by" id="by" value="">
+<input type="hidden" name="id" id="id" value="<%=@word.id%>">
+<button>Submit</button>
+</form>

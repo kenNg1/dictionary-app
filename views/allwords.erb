@@ -1,0 +1,5 @@
+<h1>All the Words</h1>
+
+<%@words.each() do |word|%>
+<li><a href="/allwords/<%=word.id%>"><%=word.name%></a></li>
+<%end%>
